@@ -102,7 +102,7 @@
                 <br>
                 <div class="row">
                     <div id="PanelRecomendaciones" class="col-md-9">
-                        
+
                         <!--<div class="ibox">
                             <div class="ibox-content">
                                 <div class="table-responsive">
@@ -176,7 +176,7 @@
                                 </span>
                                 <div class="m-t-sm">
                                     <div class="btn-group">
-                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-volume-control-phone"></i> Contactar</a>
+                                        <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#mdlPropuesta"><i class="fa fa-volume-control-phone"></i> Contactar</a>
                                     </div>
                                 </div>
                             </div>
@@ -194,6 +194,68 @@
 
 
     </div>
+
+    <!--Modal-->
+
+    <form id="frmPerfiles">
+        <div class="modal inmodal fade in" id="mdlPropuesta" tabindex="-1" role="dialog">
+            <div class="modal-dialog  modal-lg" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Propuesta</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group col-sm-3">
+                                <label>Estatus</label>
+                                <div class="input-group m-b">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-star"></i>
+                                    </span>
+
+                                    <select data-placeholder="Selecciona..." class="chosen-select" id="txtEstIDPer" tabindex="2">
+                                        <option value="1">Alta</option>
+                                        <option value="0">Baja</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label>Perfil</label>
+                                <div class="input-group m-b">
+                                    <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                    <input class="form-control" name="txtAntPer" id="txtAntPer" type="text" placeholder="Perfil">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-7">
+                                <label>Nombre</label>
+                                <div class="input-group m-b">
+                                    <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                    <input class="form-control" name="txtNomPer" id="txtNomPer" type="text" placeholder="Nombre">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label>Notas</label>
+                                <div class="input-group m-b">
+                                    <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                                    <textarea class="form-control" name="txtNotPer" id="txtNotPer" type="text" placeholder="Notas adicionales"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer tooltip-demo">
+                        <button type="button" id="btnHacerPropuesta"  data-toggle="tooltip" data-placement="top" title="Hacer propuesta" class="btn btn-rounded btn-sm btn-primary btn-outline"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                        <button type="button" id="btnRegPers" data-toggle="tooltip" data-placement="top" title="Regresar" class="btn btn-rounded btn-sm btn-primary btn-outline" data-dismiss="modal"><i class="fa fa-chevron-left"></i></button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </form>
+
 
 
     <script src="assets/js/jquery-3.1.1.min.js"></script>
@@ -233,6 +295,10 @@
     <script src="assets/js/plugins/chosen/chosen.jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+            //tipos de notificaciones
+            //notificacion('warning', 'Prueba', 'No se encontro nada', 'toast-top-right');
+            notificacion('success', 'Bienvenido', 'Gracias por visitarnos', 'toast-top-right');
+            //notificacion('error', 'Prueba', 'Busqueda realizada', 'toast-top-right');
             $('#side-menu').metisMenu();
             verRecomendaciones();
         });

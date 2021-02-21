@@ -40,7 +40,7 @@ function verRecomendaciones() {
                     } else if (Estrellas == 5) {
                         Estrellas = "<a href='#' class='text-muted'><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></a>"
                     }
-                     caja += "<div class='ibox'><div class='ibox-content'><div class='table-responsive'><table class='table shoping-cart-table'><tbody><tr><td width='90'><div class='cart-product-imitation'></div></td><td class='desc'><h3><a href='#' class='text-navy'>" + resp[i].TituloTrabajo + "</a></h3><p class='small'>" + resp[i].DescripcionLarga + "</p><dl class='small m-b-none'><dt>" + resp[i].Nombre + "</dt><dd>" + resp[i].DescripcionCorta + "</dd></dl><div class='m-t-sm'>" + Estrellas + Precio + "</div></td><td></td><td width='65'> </td><td><h4></h4 > </td></tr> </tbody></table> </div></div > <div class = 'ibox-content'> <button class = 'btn btn-primary float-right'> <i class = 'fa fa-volume-control-phone' > </i> Contactar</button > </div></div>";
+                     caja += "<div class='ibox'><div class='ibox-content'><div class='table-responsive'><table class='table shoping-cart-table'><tbody><tr><td width='90'><div class='cart-product-imitation'></div></td><td class='desc'><h3><a href='#' class='text-navy'>" + resp[i].TituloTrabajo + "</a></h3><p class='small'>" + resp[i].DescripcionLarga + "</p><dl class='small m-b-none'><dt>" + resp[i].Nombre + "</dt><dd>" + resp[i].DescripcionCorta + "</dd></dl><div class='m-t-sm'>" + Estrellas + Precio + "</div></td><td></td><td width='65'> </td><td><h4></h4 > </td></tr> </tbody></table> </div></div > <div class = 'ibox-content'> <button class = 'btn btn-primary float-right' onclick='verPropuestaID(" + resp[i].Id + ");'> <i class = 'fa fa-volume-control-phone' > </i> Contactar</button > </div></div>";
                     
 
                 }
@@ -49,3 +49,8 @@ function verRecomendaciones() {
         }
     })
 };
+
+function verPropuestaID(Id){
+    //Id lo puedes usar para guardarlo sessionStorage.setItem("PropuestaID", ID); y sepas a que tranajador le estan haciendo la propuesta
+    $("#mdlPropuesta").modal('show');
+}

@@ -18,28 +18,27 @@
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a href="#">Perfil</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Ver Perfil</a></li>
-                            <li><a href="#">Ver Empresa</a></li>
                             <li><a href="#">Cerrar Sesión</a></li>
 
                         </ul>
                     </div>
                     <div class="logo-element">
-                        <span class="text-center"><img alt="image" src="assets/Logos/LogoIcono.png" style=width:30px;height:30px;" /></span>
+                        <span class="text-center"><img alt="image" src="assets/Logos/LogoIcono.png" style="width:30px;height:30px;" /></span>
                     </div>
                 </li>
                 <li>
                     <a href="Principal.php"><i class="fa fa-group"></i> <span class="nav-label">Pagina Principal</span></a>
                 </li>
                 <li>
-                    <a><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
+                    <a><i class="fa fa-tasks"></i> <span class="nav-label">Mis Servicios</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="index.html">Dashboard v.1</a></li>
-                        <li><a href="dashboard_2.html">Dashboard v.2</a></li>
-                        <li><a href="dashboard_3.html">Dashboard v.3</a></li>
-                        <li><a href="dashboard_4_1.html">Dashboard v.4</a></li>
-                        <li><a href="dashboard_5.html">Dashboard v.5 </a></li>
+                        <li><a href="#">Finalizados</a></li>
+                        <li><a href="#">En Proceso</a></li>
+                        <li><a href="#">Por Confirmar</a></li>
                     </ul>
+                </li>
+                <li>
+                    <a><i class="fa fa-inbox"></i> <span class="nav-label">Mis Servicios</span></a>
                 </li>
             </ul>
         </div>
